@@ -1,0 +1,267 @@
+/* General App Styles */
+body {
+  font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+  margin: 0;
+  background-color: #f0f8ff; /* Light, playful background */
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Typography & General Elements */
+h1, h2, h3 {
+  color: #2a7aaf; /* Friendly blue */
+}
+
+.large-button {
+  padding: 15px 25px;
+  font-size: 1.2em;
+  border-radius: 20px; /* Rounded corners */
+  border: 3px solid transparent;
+  cursor: pointer;
+  transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Soft shadow */
+  margin: 10px;
+  background-color: #ffcc00; /* Cheerful yellow */
+  color: #4a4a4a;
+}
+
+.large-button:hover, .large-button:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
+.large-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  font-size: 1.5em; /* Large icons */
+  padding: 10px;
+  cursor: pointer;
+  color: #5c5c5c;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.icon-button:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+
+/* Header Styles */
+.app-header {
+  background-color: #76d7c4; /* Teal */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-left .logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: white;
+  /* Placeholder for a friendly LMS logo/character - could be an img or SVG */
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-right .icon-button {
+  color: white;
+  margin-left: 10px;
+}
+.header-right .icon-button:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+
+
+.points-display {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  margin-left: 15px;
+  font-size: 1.2em;
+}
+
+.points-display span[role="img"] { /* StarIcon */
+  margin-right: 5px;
+  color: #ffd700; /* Gold star */
+}
+
+/* MainDashboardView Styles */
+.dashboard-view {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.welcome-message h2 {
+  font-size: 2.5em;
+  color: #ff6347; /* Tomato red - playful */
+  margin-bottom: 30px;
+}
+
+/* Subject Selection Area */
+.subject-selection-area h3 {
+  font-size: 1.8em;
+  color: #4CAF50; /* Green */
+  margin-bottom: 20px;
+}
+
+.subject-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* SubjectCard Styles */
+.subject-card {
+  background-color: #87CEEB; /* Sky blue */
+  color: white;
+  border-color: #6495ED; /* Cornflower blue */
+  min-width: 180px; /* Ensure cards are a good size */
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* If it were a link */
+}
+
+.subject-card:nth-child(2n) {
+  background-color: #90ee90; /* Light green */
+  border-color: #3cb371; /* Medium sea green */
+}
+.subject-card:nth-child(3n) {
+  background-color: #dda0dd; /* Plum */
+  border-color: #ba55d3; /* Medium orchid */
+}
+
+
+.subject-card-icon {
+  font-size: 3em; /* Large cartoon icon */
+  margin-bottom: 10px;
+}
+
+.subject-card-name {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subject-card-progress-bar-container {
+  width: 80%;
+  height: 15px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: auto; /* Pushes to bottom if card content varies */
+}
+
+.subject-card-progress-bar-filled {
+  height: 100%;
+  background-color: #FFD700; /* Bright yellow for progress */
+  border-radius: 10px 0 0 10px; /* Keep rounded edge on left */
+  transition: width 0.5s ease-in-out;
+}
+
+/* Continue Learning Section */
+.continue-learning-section {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.continue-adventure-button {
+  background-color: #ff7f50; /* Coral */
+  color: white;
+  border-color: #ff6347; /* Tomato */
+  font-size: 1.5em;
+  padding: 20px 40px;
+}
+
+.adventure-thumbnail { /* Placeholder style for if an image is used */
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Navigation Styles */
+.footer-navigation {
+  background-color: #6a5acd; /* Slate blue */
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  flex-direction: column; /* Icon on top, text below */
+  font-size: 0.9em; /* Smaller text for nav items */
+  padding: 10px;
+  border-radius: 10px; /* Softer radius for nav buttons */
+  width: 100px; /* Give them some width */
+}
+.nav-button:hover {
+  background-color: rgba(255,255,255,0.15);
+  transform: none; /* No lift for nav buttons for stability */
+  box-shadow: none;
+}
+.nav-button:active {
+  transform: none;
+  background-color: rgba(255,255,255,0.1);
+}
+
+
+.nav-button span[role="img"] {
+  font-size: 2em; /* Large icons in nav */
+  margin-bottom: 5px;
+}
+
+.parent-area-button {
+  /* Potentially different styling to be less prominent if desired */
+  /* For "hold" interaction, visual feedback would be JS driven */
+}
+
+/* Add more specific styles for cartoonish elements, custom fonts, and icons as needed */
+/* Example:
+@font-face {
+  font-family: 'YourCartoonFont';
+  src: url('/path/to/yourcartoonfont.woff2') format('woff2');
+}
+body {
+  font-family: 'YourCartoonFont', sans-serif;
+}
+*/
